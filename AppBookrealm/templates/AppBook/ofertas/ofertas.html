@@ -1,0 +1,47 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+{% block title %}
+Ofertas
+{% endblock %}
+
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Ofertas</h1>
+<h2 class="masthead-subheading mb-0" style="color:#ee0979;">Rebajas actuales</h2>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+{% endblock titulo %}
+
+
+
+
+
+{% block cambia %}
+
+<section id="scroll">
+        
+        
+    <form class="d-flex mt-3 px-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="15%, 20%, 30%, etc..." aria-label="Search">
+        <button class="btn btn-outline-success px-5" type="submit">Search</button>
+    </form>
+
+    <div class="row justify-content-center mt-4">
+        {% for libro in object_list %}
+            {% if libro.oferta != "0%" %}
+                <div class="card me-3 mb-4" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{libro.titulo}}</h5>
+                        <p class="card-text">
+                        </p>
+                        <a href="#" class="btn btn-primary">{{libro.oferta}}</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock cambia %}

@@ -1,0 +1,52 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+
+{% block title %}
+    Discusiones
+{% endblock title %}
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Discusiones</h1>
+<h2 class="masthead-subheading mb-0" style="color:#ee0979;"># Interactua con otros</h2>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+{% endblock titulo%}
+
+
+
+{% block cambia %}
+
+<section id="scroll">
+
+    <p>
+        # Si queres agregar algo, ten&eacute;s que loguearte
+    </p>
+
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle"
+                    src="{% static 'AppBook/assets/img/02.jpg' %}" alt="..." />
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Discusiones</h2>
+                    <div class="card">
+                        <div class="card-header">
+                          Featured
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock cambia %}

@@ -1,0 +1,30 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+
+
+{% block title %}
+    Perfil
+{% endblock title %}
+
+
+{% block titulo %}
+
+<h1 class="masthead-heading mb-0">Perfil</h1>
+<h2 class="masthead-subheading mb-0" style="color:#ee0979;"></h2>
+
+<p>
+    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'EditarPerfil' %}">Editar</a>
+
+    <br>
+
+    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'PagCompras' %}">Ver tus compras</a>
+
+    <br>
+
+    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'Logout' %}">Cerrar sesi&oacute;n</a>
+</p>
+
+
+
+{% endblock titulo %}

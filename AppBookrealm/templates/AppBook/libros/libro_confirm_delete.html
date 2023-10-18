@@ -1,0 +1,20 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+
+{% block title %}
+    Confirmar eliminacion
+{% endblock title %}
+
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0" style="color:#ee0979;">{{libro.titulo}}</h1>
+<form action="" method="post" class="masthead-subheading mb-0">
+    {% csrf_token %}
+
+    ¿Deseas eliminar este libro? <br>
+    <a href="{% url 'PagLibros' %}" class="btn btn-primary btn-xl rounded-pill mt-5">No</a>
+    <input type="submit" value="S&iacute;" class="btn btn-primary btn-xl rounded-pill mt-5">
+</form>
+{% endblock titulo %}

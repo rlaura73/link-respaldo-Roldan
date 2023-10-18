@@ -1,0 +1,25 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+{% block title %}
+Registrarse
+{% endblock %}
+
+
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Registro</h1>
+<h2 class="masthead-subheading mb-0"></h2>
+
+<p>
+    Tienes un usuario? Inicia sesi&oacute;n
+    <a href="{% url 'Login' %}" class="link">aqu&iacute;</a>
+</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Registrarse" class="btn btn-primary btn-xl rounded-pill mt-5">
+</form>
+{% endblock %}

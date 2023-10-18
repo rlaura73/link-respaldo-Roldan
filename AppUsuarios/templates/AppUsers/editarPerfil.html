@@ -1,0 +1,23 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+
+
+{% block title %}
+    Editar perfil
+{% endblock title %}
+
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Editar perfil</h1>
+<h2 class="masthead-subheading mb-0" style="color:#ee0979;"></h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Editar" class="btn btn-primary btn-xl rounded-pill mt-5">
+</form>
+
+
+{% endblock titulo %}

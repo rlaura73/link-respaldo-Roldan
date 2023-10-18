@@ -1,0 +1,37 @@
+{% extends "AppBook/padre.html" %}
+{% load static %}
+
+{% block title %}
+Compras
+{% endblock %}
+
+
+
+{% block titulo %}
+<h1 class="masthead-heading mb-0">Tus compras</h1>
+<h2 class="masthead-subheading mb-0" style="color:#ee0979;"> # en desarrollo</h2>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+{% endblock titulo %}
+
+
+
+
+
+{% block cambia %}
+
+    <section id="scroll">
+        <h1>
+            # EDITAR CABECERA COMPRAS
+        </h1>
+        
+        <p>
+            # ac&aacute; se listar&iacute;a las compras que hiciste ??? <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; ### REDIRIGIRSE AL LOGIN <br>
+            {% if request.user.is_authenticated %}
+                <a class="" href="{% url 'Logout' %}">Cerrar sesi&oacute;n</a>
+            {% endif %}
+        </p>
+
+    </section>
+
+{% endblock cambia %}
